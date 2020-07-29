@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 引入我们的css初始化文件 -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- 引入我们首页的css -->
+    <link rel="stylesheet" href="./css/index.css">
+    <title>2048小游戏</title>
+</head>
+<body>
+    <!-- 顶部标题、新游戏按钮、分数框 -->
+    <div class="game_top">
+        <h1>2048小游戏</h1>
+        <ul>
+            <li id="start">开始</li>
+            <li id="reset">重置</li>
+            <li>分数：<span class="score" id="score">0</span></li>
+        </ul>
+    </div>
+
+    <!-- 中间16个空格部分 -->
+    <div class="game_container">
+        <ul>
+            <li><span id="c_0_0"></span></li>
+            <li><span id="c_0_1"></span></li>
+            <li><span id="c_0_2"></span></li>
+            <li><span id="c_0_3"></span></li>
+            <li><span id="c_1_0"></span></li>
+            <li><span id="c_1_1"></span></li>
+            <li><span id="c_1_2"></span></li>
+            <li><span id="c_1_3"></span></li>
+            <li><span id="c_2_0"></span></li>
+            <li><span id="c_2_1"></span></li>
+            <li><span id="c_2_2"></span></li>
+            <li><span id="c_2_3"></span></li>
+            <li><span id="c_3_0"></span></li>
+            <li><span id="c_3_1"></span></li>
+            <li><span id="c_3_2"></span></li>
+            <li><span id="c_3_3"></span></li>
+        </ul>
+    </div>
+
+    <!-- 控制小方格移动的按钮 -->
+    <div class="game_control">
+        <ul>
+            <li id="up"></li>
+            <li id="left"></li>
+            <li id="right"></li>
+            <li id="down"></li>
+        </ul>
+    </div>
+
+    <!-- 游戏结束弹出框 -->
+    <div id="game_over" class="game_over hide">
+
+        <!-- 关闭 -->
+        <span id="close" class="close">&times;</span>
+
+        <!-- 游戏胜利 -->
+        <div id="game_win" class="game_win hide">
+            <h1>Congratulations!!!</h1>
+            <h1>꒰๑´•.̫ • `๑꒱</h1>
+            <h3>恭喜您，您真的太厉害了！！！</h3>
+        </div>
+        
+        <!-- 游戏失败 -->
+        <div id="game_lose" class="game_lose hide">
+            <h1>What a pity!!!</h1>
+            <h1> ╮(๑•́ ₃•̀๑)╭</h1>
+            <h3>很遗憾，您的挑战失败，请重新开始！</h3>
+        </div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/bgcolor.js"></script>
+    <script src="js/move.js"></script>
+</body>
+</html>

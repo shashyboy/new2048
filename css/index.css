@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    background: #fff;
+}
+
+body{
+    width: 100%;
+    max-width: 500px;
+    min-width: 320px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica, sans-serif;
+    color: #666;
+    line-height: 1.5;
+    text-align: center;
+    border: 2px #ee8972 solid;
+    border-radius: 5px;
+    background-color: #fbe3b9;
+}
+
+/*顶部样式*/
+
+.game_top{
+    width: 100%;
+}
+
+.game_top h1{
+    margin: 5px 0;
+    width: 100%;
+}
+
+.game_top ul{
+    padding: 0 8%;
+}
+
+.game_top ul li{
+    float: left;
+    width: 25%;
+    border: 2px #ee8972 solid;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-left: 5%;
+    padding: 5px 0;
+    font-weight: bold;
+    text-shadow: 4px 2px 1px #bbb;
+    cursor: pointer; 
+}
+
+.game_top ul li:nth-child(3){
+    width: 30%;
+}
+
+/*清除浮动*/
+
+.game_top ul:after{
+    content: "";             /*设置内容为空*/
+    height: 0;               /*高度为0*/
+    line-height: 0;          /*行高为0*/
+    display: block;          /*将文本转为块级元素*/
+    visibility: hidden;      /*将元素隐藏*/
+    clear: both;             /*清除浮动*/
+}
+
+.score{
+    color: green;
+}
+
+
+/*游戏16个方格样式*/
+
+.game_container{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.game_container ul{
+    padding: 0 10%;
+}
+
+.game_container ul li{
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 0;
+    padding-bottom: 20%;
+    margin: 2% 0 0 4%;
+    background-color: #d1cebd;
+    border-radius: 5px;
+}
+
+/* 设置方格里的数字 */
+.num{
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    width: 100%;
+    font-size: 28px;
+    line-height: 100%;
+    color: #3c3d47;
+    font-weight: bold;
+}
+
+/*清除浮动*/
+
+.game_container ul:after{
+    content: "";             /*设置内容为空*/
+    height: 0;               /*高度为0*/
+    line-height: 0;          /*行高为0*/
+    display: block;          /*将文本转为块级元素*/
+    visibility: hidden;      /*将元素隐藏*/
+    clear: both;             /*清除浮动*/
+}
+
+
+/*游戏控制方格移动按钮*/
+
+.game_control{
+    margin: 20px 0;
+}
+
+.game_control ul{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+}
+
+.game_control ul li{
+    position: absolute;
+    width: 15%;
+    height: 0;
+    padding-bottom: 15%;
+    border-radius: 10px;
+    background: url(../img/箭头.png) no-repeat;
+    background-size: 100% 100%;
+    background-color: #d1cebd;
+    opacity: 0.8;
+    cursor: pointer; 
+}
+
+.game_control ul li:nth-child(1){
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    -ms-transform: translateX(-50%) rotate(-90deg);     /* IE 9 */
+    -moz-transform: translateX(-50%) rotate(-90deg);    /* Firefox */
+    -webkit-transform: translateX(-50%) rotate(-90deg); /* Safari and Chrome */
+    -o-transform: translateX(-50%) rotate(-90deg);      /* Opera */
+}
+
+.game_control ul li:nth-child(2){
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%) rotate(180deg);
+    -ms-transform: translateY(-50%) rotate(180deg);      /* IE 9 */
+    -moz-transform: translateY(-50%) rotate(180deg);     /* Firefox */
+    -webkit-transform: translateY(-50%) rotate(180deg);  /* Safari and Chrome */
+    -o-transform: translateY(-50%) rotate(180deg);       /* Opera */
+}
+
+.game_control ul li:nth-child(3){
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);     /* IE 9 */
+    -moz-transform: translateY(-50%);    /* Firefox */
+    -webkit-transform: translateY(-50%); /* Safari and Chrome */
+    -o-transform: translateY(-50%);      /* Opera */
+
+}
+
+.game_control ul li:nth-child(4){
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    -ms-transform: translateX(-50%) rotate(90deg);     /* IE 9 */
+    -moz-transform: translateX(-50%) rotate(90deg);    /* Firefox */
+    -webkit-transform: translateX(-50%) rotate(90deg); /* Safari and Chrome */
+    -o-transform: translateX(-50%) rotate(90deg);      /* Opera */
+}
+
+
+/*游戏结束弹出框*/
+
+.game_over{
+    position: fixed;
+    width: 100%;
+    max-width: 500px;
+    min-width: 320px;
+    height: 200px;
+    top: 30%;
+    margin: o auto;
+    z-index:1000;    
+    background: #000000;
+    border: 1px solid black;
+    border-radius: 15px;
+    opacity: 0.8;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;  
+}
+
+.game_over .close{
+    position:absolute;
+    width: 10%;
+    height: 10%;
+    top: 0px;
+    right: 0px;
+    font-size: 25px;
+}
+
+.hide{
+    display: none;
+}
